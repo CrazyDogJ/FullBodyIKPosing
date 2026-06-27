@@ -16,6 +16,9 @@ class FULLBODYIKPOSING_API UFullBodyIKPosingAnimInstance : public UAnimInstance
 	GENERATED_BODY()
 	
 public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<FTransform> GizmoTransforms;
+	
 	// 由快照节点在Initialize_AnyThread里调用,完成注册
 	void RegisterSnapshotNode(FName InSnapshotName, FAnimNode_SaveBoneTransformSnapshot* InNode);
 
